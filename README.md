@@ -3,7 +3,7 @@
 ## Hey
 I am Cameron Whyte, you can call me Red.
 I've been programming since my 7th year of school and hope to get a degree in Computer Science.
-I am a back-end developer hoping to learn more front-end languages like HTML and CSS.
+I am a Full Stack developer hoping to learn more front-end languages like HTML and CSS.
 
 - 🔭 I’m currently working on EduMC, EduMC is a ElectronJS application that teaches people to program in Java through making Minecraft mods.
 - 🌱 I’m currently learning Java, C#, C++, Javascript.
