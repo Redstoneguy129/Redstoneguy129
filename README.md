@@ -2,8 +2,9 @@
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=Redstoneguy129&show_icons=true&theme=radical" />
 </a>
 <a href="https://github.com/Redstoneguy129">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=anuraghazra&layout=compact" />
+  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Redstoneguy129&layout=compact&theme=radical" />
 </a>
+
 ## Hey
 I am Cameron Whyte, you can call me Red.
 I've been programming since my 7th year of school and hope to get a degree in Computer Science.
