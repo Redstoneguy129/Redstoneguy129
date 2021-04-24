@@ -12,7 +12,7 @@ function App() {
             </Helmet>
             <main className="z-10 inset-0 absolute">
                 <Navbar/>
-                <div className="flex flex-col">
+                <div className="flex flex-col space-y-6">
                     <div className="lg:mt-72 mt-32 mb-80"><Landing/></div>
                     <Element name="skills" className="">
                         <Skills/>
