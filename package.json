@@ -28,7 +28,7 @@
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && git clone https://github.com/Redstoneguy129/Redstoneguy129.git deployment/ && cd deployment && ls -a && git checkout deployment && ls -a && rm -r * && rm -r .github && rm -r .gitignore && ls -a && mv ../build/* . && ls -a && git remote add origin https://github.com/Redstoneguy129/Redstoneguy129.git && git add . && git commit -m 'Publish' && git push origin deployment --force"
+    "deploy": "npm run build && git clone https://github.com/Redstoneguy129/Redstoneguy129.git deployment/ && cd deployment && ls -a && git checkout deployment && ls -a && rm -r * && rm -r .github && rm -r .gitignore && ls -a && mv ../build/* . && ls -a && git add . && git commit -m 'Publish'"
   },
   "eslintConfig": {
     "extends": [
