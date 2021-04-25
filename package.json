@@ -29,7 +29,7 @@
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && find . -type f -not (-name 'build' -or -name '.git' ) -delete && mv build/* . && rm -r build && git add . && git commit 'Publish' && git push --force -u origin gh-pages"
+    "deploy": "npm run build && find . -type f -not -name 'build' -delete && mv build/* . && rm -r build && git add . && git commit 'Publish' && git push --force -u origin gh-pages"
   },
   "eslintConfig": {
     "extends": [
