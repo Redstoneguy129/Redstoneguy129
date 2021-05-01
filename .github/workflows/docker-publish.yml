@@ -31,12 +31,12 @@ jobs:
 
   # Push image to GitHub Packages.
   # See also https://docs.docker.com/docker-hub/builds/
-  push:
+  release:
     # Ensure test job passes before pushing image.
     needs: test
 
     runs-on: ubuntu-latest
-    if: github.event_name == 'push'
+    if: github.event_name == 'release'
 
     permissions:
       contents: read
