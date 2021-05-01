@@ -11,7 +11,7 @@ RUN echo "**** install Python ****" && \
     if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi
 RUN git clone https://github.com/Redstoneguy129/Redstoneguy129.git && cd Redstoneguy129 && npm install && npm run build && rm -r /usr/share/nginx/html/* && cp -a build/. /usr/share/nginx/html/ && pip3 install -r requirements.txt && cp nginx.conf /etc/nginx/nginx.conf
 
-ENTRYPOINT ['nginx', '-g', 'daemon off']
+ENTRYPOINT ['nginx', '-g', 'daemon on']
 EXPOSE 80 2545
 
 CMD ["python3", "/Redstoneguy129/update.py"]
