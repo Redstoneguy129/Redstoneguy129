@@ -22,7 +22,7 @@ class Server(BaseHTTPRequestHandler):
         if payload["action"] == "published":
             print("Updating Website")
             gitRepo.pull()
-            call("npm install && npm run build && rm -r /usr/share/nginx/html/* && rsync -vt build/* /usr/share/nginx/html", shell=True)
+            call("npm install && npm run build", shell=True)
 
     def log_message(self, format, *args):
         return
