@@ -2,6 +2,7 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 from hmac import new, compare_digest
 from dotenv import load_dotenv
 from os import getenv, getcwd
+from threading import Thread
 from subprocess import call
 from hashlib import sha256
 from git.cmd import Git
@@ -28,11 +29,15 @@ class Server(BaseHTTPRequestHandler):
         return
 
 
-if __name__ == "__main__":
-    load_dotenv()
-    webServer = HTTPServer(("0.0.0.0", 2545), Server)
+def start():
+    webServer = HTTPServer(("localhost", 2545), Server)
     try:
         webServer.serve_forever()
     except KeyboardInterrupt:
         pass
     webServer.server_close()
+
+
+if __name__ == "__main__":
+    load_dotenv()
+    Thread(target=start, daemon=True).start()
