@@ -9,6 +9,6 @@ RUN echo "**** install Python ****" && \
     rm -r /usr/lib/python*/ensurepip && \
     pip3 install --no-cache --upgrade pip setuptools wheel && \
     if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi
-RUN git clone https://github.com/Redstoneguy129/Redstoneguy129.git && cd Redstoneguy129 && rm -r /etc/nginx/nginx.conf && cp nginx.conf /etc/nginx/nginx.conf && ls -a &&  pip3 install -r requirements.txt
+RUN git clone https://github.com/Redstoneguy129/Redstoneguy129.git && cd Redstoneguy129 && ls -a &&  pip3 install -r requirements.txt
 
 EXPOSE 80 2545
