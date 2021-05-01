@@ -10,5 +10,8 @@ RUN echo "**** install Python ****" && \
     pip3 install --no-cache --upgrade pip setuptools wheel && \
     if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi
 RUN git clone https://github.com/Redstoneguy129/Redstoneguy129.git && cd Redstoneguy129 && rm -r /etc/nginx/nginx.conf && cp nginx.conf /etc/nginx/nginx.conf && ls -a &&  pip3 install -r requirements.txt
-CMD ["python3", "update.py"]
+
+EXPOSE 80 443 2545
+
+CMD ["python3", "Redstoneguy129/update.py"]
 
