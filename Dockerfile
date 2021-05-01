@@ -12,6 +12,3 @@ RUN echo "**** install Python ****" && \
 RUN git clone https://github.com/Redstoneguy129/Redstoneguy129.git && cd Redstoneguy129 && rm -r /etc/nginx/nginx.conf && cp nginx.conf /etc/nginx/nginx.conf && ls -a &&  pip3 install -r requirements.txt
 
 EXPOSE 80 443 2545
-
-CMD ["python3", "Redstoneguy129/update.py"]
-
