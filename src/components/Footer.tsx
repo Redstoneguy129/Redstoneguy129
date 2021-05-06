@@ -58,7 +58,7 @@ class Footer extends React.Component {
                         <a href="mailto:public@cameronwhyte.me" rel="noreferrer" target="_blank"><img src={email} width="20" height="20" alt="email"/></a>
                     </div>
                     <div className="text-center pt-10 sm:pt-12 font-light flex items-center justify-center">
-                        {'</>'} with ❤ by Cameron Whyte.
+                        {'</>'} with ❤ by Cameron Whyte
                     </div>
                 </div>
             </footer>
