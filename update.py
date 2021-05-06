@@ -30,7 +30,7 @@ class Server(BaseHTTPRequestHandler):
 
 if __name__ == "__main__":
     load_dotenv()
-    webServer = HTTPServer(("localhost", 2545), Server)
+    webServer = HTTPServer(("0.0.0.0", 2545), Server)
     try:
         webServer.serve_forever()
     except KeyboardInterrupt:
