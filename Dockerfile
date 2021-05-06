@@ -10,6 +10,6 @@ RUN echo "**** install Python ****" && \
     pip3 install --no-cache --upgrade pip setuptools wheel && \
     if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi
 RUN git clone https://github.com/Redstoneguy129/Redstoneguy129.git && cd Redstoneguy129 && npm install && npm run build && rm -r /usr/share/nginx/html/* && cp -a build/. /usr/share/nginx/html/ && pip3 install -r requirements.txt && cp nginx.conf /etc/nginx/nginx.conf
-RUN python3 /Redstoneguy129/update.py > /dev/null 2>&1 & disown
+RUN sh /Redstoneguy129/update.sh
 EXPOSE 80 2545
 CMD ["nginx", "-g", "daemon off;"]
