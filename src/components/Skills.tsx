@@ -1,13 +1,50 @@
 import React from "react";
+import { Octokit } from "@octokit/rest";
+import { instanceOf } from "prop-types";
+import { withCookies, Cookies } from 'react-cookie';
+import {commits as commitsIcon, time as timeIcon, calendar as calenderIcon} from "../assets";
 
-export class Skills extends React.Component {
+class Skills extends React.Component {
+    static propTypes = {
+        cookies: instanceOf(Cookies).isRequired
+    }
     constructor(props: {} | Readonly<{}>) {
         super(props);
+        // @ts-ignore
+        const { cookies } = props;
         this.state = {
+            commits: cookies.get("commits") || 0,
+            average: cookies.get("daily_average") || 0,
+            past: cookies.get("past_year") || 0
         }
     }
     async componentDidMount() {
-
+        // @ts-ignore
+        const { cookies } = this.props;
+        if(cookies.get("commits") === undefined) {
+            const commits_count = (await new Octokit().search.commits({q: "committer:Redstoneguy129"})).data.total_count;
+            cookies.set("commits", commits_count, { expires: new Date(Date.now() + 86400000) });
+        }
+        if(cookies.get("daily_average") === undefined) {
+            const daily_average = (await (await fetch("https://wakatime.com/api/v1/users/Redstoneguy129/stats/last_year")).formData()).get("human_readable_daily_average");
+            cookies.set("daily_average", daily_average, { expires: new Date(Date.now() + 86400000) });
+        }
+        if(cookies.get("past_year") === undefined) {
+            const past_year = (await (await fetch("https://wakatime.com/api/v1/users/Redstoneguy129/stats/last_year")).formData()).get("human_readable_total");
+            cookies.set("past_year", past_year, { expires: new Date(Date.now() + 86400000) });
+        }
+    }
+    getCommits() {
+        // @ts-ignore
+        return this.state.commits;
+    }
+    getAverage() {
+        // @ts-ignore
+        return this.state.average;
+    }
+    getPast() {
+        // @ts-ignore
+        return this.state.past;
     }
     render() {
         return (
@@ -15,40 +52,34 @@ export class Skills extends React.Component {
                 <div className="flex justify-center gap-x-8">
                     <div className="flex items-center space-x-4 p-6">
                         <div className="flex items-center p-4 text-white rounded-lg bg-gradient-to-tr from-yellow-400 to-red-500">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="fill-current w-7 h-7" width="24" height="24" viewBox="0 0 24 24">
-                                <path d="M17.997 18h-11.995l-.002-.623c0-1.259.1-1.986 1.588-2.33 1.684-.389 3.344-.736 2.545-2.209-2.366-4.363-.674-6.838 1.866-6.838 2.491 0 4.226 2.383 1.866 6.839-.775 1.464.826 1.812 2.545 2.209 1.49.344 1.589 1.072 1.589 2.333l-.002.619zm4.811-2.214c-1.29-.298-2.49-.559-1.909-1.657 1.769-3.342.469-5.129-1.4-5.129-1.265 0-2.248.817-2.248 2.324 0 3.903 2.268 1.77 2.246 6.676h4.501l.002-.463c0-.946-.074-1.493-1.192-1.751zm-22.806 2.214h4.501c-.021-4.906 2.246-2.772 2.246-6.676 0-1.507-.983-2.324-2.248-2.324-1.869 0-3.169 1.787-1.399 5.129.581 1.099-.619 1.359-1.909 1.657-1.119.258-1.193.805-1.193 1.751l.002.463z"/>
-                            </svg>
+                            <img src={commitsIcon} className="fill-current w-7 h-7" width="24" height="24" alt="commits"/>
                         </div>
                         <div className="flex-1">
                             <p className="text-white font-semibold">Yearly Commits</p>
                             <h2 className="text-2xl font-semibold text-white">
-                                34,567
+                                {this.getCommits()}
                             </h2>
                         </div>
                     </div>
                     <div className="flex items-center space-x-4 p-6">
                         <div className="flex items-center p-4 text-white rounded-lg bg-gradient-to-t from-yellow-400 to-red-500">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="fill-current w-7 h-7" width="24" height="24" viewBox="0 0 24 24">
-                                <path d="M17.997 18h-11.995l-.002-.623c0-1.259.1-1.986 1.588-2.33 1.684-.389 3.344-.736 2.545-2.209-2.366-4.363-.674-6.838 1.866-6.838 2.491 0 4.226 2.383 1.866 6.839-.775 1.464.826 1.812 2.545 2.209 1.49.344 1.589 1.072 1.589 2.333l-.002.619zm4.811-2.214c-1.29-.298-2.49-.559-1.909-1.657 1.769-3.342.469-5.129-1.4-5.129-1.265 0-2.248.817-2.248 2.324 0 3.903 2.268 1.77 2.246 6.676h4.501l.002-.463c0-.946-.074-1.493-1.192-1.751zm-22.806 2.214h4.501c-.021-4.906 2.246-2.772 2.246-6.676 0-1.507-.983-2.324-2.248-2.324-1.869 0-3.169 1.787-1.399 5.129.581 1.099-.619 1.359-1.909 1.657-1.119.258-1.193.805-1.193 1.751l.002.463z"/>
-                            </svg>
+                            <img src={timeIcon} className="fill-current w-7 h-7" width="24" height="24" alt="commits"/>
                         </div>
                         <div className="flex-1">
                             <p className="text-white font-semibold">Daily Average</p>
                             <h2 className="text-2xl font-semibold text-white">
-                                16.6 Hours
+                                {this.getAverage()}
                             </h2>
                         </div>
                     </div>
                     <div className="flex items-center space-x-4 p-6">
                         <div className="flex items-center p-4 text-white rounded-lg bg-gradient-to-tl from-yellow-400 to-red-500">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="fill-current w-7 h-7" width="24" height="24" viewBox="0 0 24 24">
-                                <path d="M17.997 18h-11.995l-.002-.623c0-1.259.1-1.986 1.588-2.33 1.684-.389 3.344-.736 2.545-2.209-2.366-4.363-.674-6.838 1.866-6.838 2.491 0 4.226 2.383 1.866 6.839-.775 1.464.826 1.812 2.545 2.209 1.49.344 1.589 1.072 1.589 2.333l-.002.619zm4.811-2.214c-1.29-.298-2.49-.559-1.909-1.657 1.769-3.342.469-5.129-1.4-5.129-1.265 0-2.248.817-2.248 2.324 0 3.903 2.268 1.77 2.246 6.676h4.501l.002-.463c0-.946-.074-1.493-1.192-1.751zm-22.806 2.214h4.501c-.021-4.906 2.246-2.772 2.246-6.676 0-1.507-.983-2.324-2.248-2.324-1.869 0-3.169 1.787-1.399 5.129.581 1.099-.619 1.359-1.909 1.657-1.119.258-1.193.805-1.193 1.751l.002.463z"/>
-                            </svg>
+                            <img src={calenderIcon} className="fill-current w-7 h-7" width="24" height="24" alt="commits"/>
                         </div>
                         <div className="flex-1">
                             <p className="text-white font-semibold">Past Year</p>
                             <h2 className="text-2xl font-semibold text-white">
-                                54 Days
+                                {this.getPast()}
                             </h2>
                         </div>
                     </div>
@@ -57,3 +88,5 @@ export class Skills extends React.Component {
         );
     }
 }
+
+export default withCookies(Skills);
