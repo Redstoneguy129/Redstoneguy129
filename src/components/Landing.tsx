@@ -26,7 +26,14 @@ export class Landing extends React.Component {
                         </div>
                         <div className="px-3">
                             <div className="mt-12 inline-flex rounded-md shadow">
-                                <button type="button" className="py-4 px-6 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg bg-gradient-to-b from-yellow-400 to-red-500" onClick={() => {
+                                <button type="button" className="py-4 px-6 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg bg-gradient-to-b from-yellow-400 to-red-500">
+                                    CV
+                                </button>
+                            </div>
+                        </div>
+                        <div className="px-3">
+                            <div className="mt-12 inline-flex rounded-md shadow">
+                                <button type="button" className="py-4 px-6 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg bg-gradient-to-br from-yellow-400 to-red-500" onClick={() => {
                                     scroller.scrollTo('projects', {
                                         duration: 1500,
                                         delay: 100,
