@@ -5,7 +5,7 @@ export class Projects extends React.Component {
     render() {
         return (
             <div className="flex flex-col">
-                <h2 className="flex justify-center text-3xl font-extrabold text-black dark:text-white sm:text-4xl">
+                <h2 className="flex justify-center text-3xl font-extrabold text-black dark:text-white sm:text-4xl pt-6">
                     <span className="block text-white mb-4">Projects</span>
                 </h2>
                 <div className="flex justify-center">

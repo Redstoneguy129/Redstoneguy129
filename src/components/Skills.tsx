@@ -64,7 +64,7 @@ class Skills extends React.Component {
     render() {
         return (
             <div className="flex flex-col">
-                <h2 className="flex justify-center text-3xl font-extrabold text-black dark:text-white sm:text-4xl">
+                <h2 className="flex justify-center text-3xl font-extrabold text-black dark:text-white sm:text-4xl pt-4">
                     <span className="block text-white mb-4">Skills</span>
                 </h2>
                 <div className="flex justify-center">
@@ -104,7 +104,7 @@ class Skills extends React.Component {
                         </div>
                     </div>
                 </div>
-                <h2 className="flex justify-center text-xl font-extrabold text-black dark:text-white sm:text-2xl">
+                <h2 className="flex justify-center text-xl font-extrabold text-black dark:text-white sm:text-2xl pt-6">
                     <span className="block text-white mb-2">Languages</span>
                 </h2>
                 <div className="flex justify-center">
@@ -146,7 +146,7 @@ class Skills extends React.Component {
                         </div>
                     </div>
                 </div>
-                <h2 className="flex justify-center text-xl font-extrabold text-black dark:text-white sm:text-2xl">
+                <h2 className="flex justify-center text-xl font-extrabold text-black dark:text-white sm:text-2xl pt-6">
                     <span className="block text-white mb-2">Frameworks + Libraries</span>
                 </h2>
                 <div className="flex justify-center">
