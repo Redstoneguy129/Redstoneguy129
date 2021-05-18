@@ -24,14 +24,21 @@ class Skills extends React.Component {
         if(cookies.get("commits") === undefined) {
             const commits_count = (await new Octokit().search.commits({q: "committer:Redstoneguy129"})).data.total_count;
             cookies.set("commits", commits_count, { expires: new Date(Date.now() + 86400000) });
+            this.setState({
+                commits: commits_count
+            });
         }
-        if(cookies.get("daily_average") === undefined) {
-            const daily_average = (await (await fetch("https://wakatime.com/api/v1/users/Redstoneguy129/stats/last_year")).formData()).get("human_readable_daily_average");
-            cookies.set("daily_average", daily_average, { expires: new Date(Date.now() + 86400000) });
-        }
-        if(cookies.get("past_year") === undefined) {
-            const past_year = (await (await fetch("https://wakatime.com/api/v1/users/Redstoneguy129/stats/last_year")).formData()).get("human_readable_total");
-            cookies.set("past_year", past_year, { expires: new Date(Date.now() + 86400000) });
+        if(cookies.get("daily_average") === undefined || cookies.get("past_year") === undefined) {
+            const wakatime = (await (await fetch("https://wakatime.com/share/@Redstoneguy129/b2d60553-2762-428c-ab49-e722f04811a3.json", {
+                method: "GET"
+            })).json()).data["grand_total"];
+            console.log(wakatime)
+            cookies.set("daily_average", wakatime["human_readable_daily_average"], { expires: new Date(Date.now() + 86400000) });
+            cookies.set("past_year", wakatime["human_readable_total"], { expires: new Date(Date.now() + 86400000) });
+            this.setState({
+                average: wakatime["human_readable_daily_average"],
+                past: wakatime["human_readable_total"]
+            });
         }
     }
     getCommits() {

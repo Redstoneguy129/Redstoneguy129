@@ -23,10 +23,16 @@ class Footer extends React.Component {
         if(cookies.get("repos") === undefined) {
             const reposValue = (await new Octokit().rest.users.getByUsername({username: "Redstoneguy129"})).data.public_repos;
             cookies.set("repos", reposValue, { expires: new Date(Date.now() + 86400000) });
+            this.setState({
+                repos: reposValue
+            });
         }
         if(cookies.get("stars") === undefined) {
             const starsValue = (await(await fetch("https://api.github.com/users/Redstoneguy129/starred")).json()).length;
             cookies.set("stars", starsValue, { expires: new Date(Date.now() + 86400000) });
+            this.setState({
+                stars: starsValue
+            });
         }
     }
     getRepos(): number {

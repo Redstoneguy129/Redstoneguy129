@@ -10,10 +10,9 @@ function App() {
             <Helmet>
                 <style>{'body { background-color: #191a22; }'}</style>
             </Helmet>
-            <main className="z-10 inset-0 absolute">
-                <Navbar/>
+            <main className="z-8 inset-0 absolute">
+                <div className="flex justify-center items-center w-full h-full"><Landing/></div>
                 <div className="flex flex-col space-y-6">
-                    <div className="lg:mt-72 mt-32 mb-80"><Landing/></div>
                     <Element name="skills" className="">
                         <Skills/>
                     </Element>
