@@ -1,7 +1,7 @@
 import React from 'react';
 import {Element} from "react-scroll";
 import {Helmet} from 'react-helmet';
-import {Navbar, Footer, Landing, Skills, Projects} from "./components";
+import {Footer, Landing, Skills, Projects} from "./components";
 import Particles from "react-particles-js";
 
 function App() {
@@ -10,15 +10,11 @@ function App() {
             <Helmet>
                 <style>{'body { background-color: #191a22; }'}</style>
             </Helmet>
-            <main className="z-8 inset-0 absolute">
+            <main className="z-10 inset-0 absolute">
                 <div className="flex justify-center items-center w-full h-full"><Landing/></div>
                 <div className="flex flex-col space-y-6">
-                    <Element name="skills" className="">
-                        <Skills/>
-                    </Element>
-                    <Element name="projects">
-                        <Projects/>
-                    </Element>
+                    <Element name="skills"><Skills/></Element>
+                    <Element name="projects"><Projects/></Element>
                 </div>
                 <Footer/>
             </main>

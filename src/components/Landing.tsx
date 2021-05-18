@@ -4,7 +4,7 @@ import {scroller} from "react-scroll";
 export class Landing extends React.Component {
     render() {
         return (
-            <div className="text-center self-center z-20">
+            <div className="text-center self-center">
                 <h2 className="text-3xl font-extrabold text-black dark:text-white sm:text-4xl">
                     <span className="block text-white">Welcome to my Site!</span>
                     <span className="block bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-red-500">I&#x27;m a Full-Stack Developer.</span>
