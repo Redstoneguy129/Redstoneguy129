@@ -37,7 +37,7 @@ class Skills extends React.Component {
             });
         }
         if(cookies.get("daily_average") === undefined || cookies.get("past_year") === undefined) {
-            const wakatime = (await (await fetch("https://wakatime.com/share/@Redstoneguy129/b2d60553-2762-428c-ab49-e722f04811a3.json", {
+            const wakatime = (await (await fetch("https://cors-cameronwhyte-proxy.herokuapp.com/https://wakatime.com/share/@Redstoneguy129/b2d60553-2762-428c-ab49-e722f04811a3.json", {
                 method: "GET"
             })).json()).data["grand_total"];
             console.log(wakatime)

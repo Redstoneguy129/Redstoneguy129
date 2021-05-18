@@ -6,6 +6,7 @@ from subprocess import call
 from hashlib import sha256
 from git.cmd import Git
 from json import loads
+
 gitRepo = Git(getcwd())
 
 
@@ -16,13 +17,17 @@ def verify_signature(payload_body, secret, signature):
 class Server(BaseHTTPRequestHandler):
     def do_POST(self):
         payload = self.rfile.read(int(self.headers['Content-Length']))
-        self.send_response(204) if verify_signature(payload, getenv("SECRET_KEY"), self.headers.get("x-hub-signature-256")) else self.send_response(401)
+        self.send_response(204) if verify_signature(payload, getenv("SECRET_KEY"),
+                                                    self.headers.get("x-hub-signature-256")) else self.send_response(
+            401)
         payload = loads(payload.decode("utf-8"))
         self.end_headers()
         if payload["action"] == "published":
             print("Updating Website")
             gitRepo.pull()
-            call("npm install && npm run build && rm -r /usr/share/nginx/html/* && cp -a build/. /usr/share/nginx/html/", shell=True)
+            call(
+                "npm install && npm run build && rm -r /usr/share/nginx/html/* && cp -a build/. /usr/share/nginx/html/",
+                shell=True)
 
     def log_message(self, format, *args):
         return
