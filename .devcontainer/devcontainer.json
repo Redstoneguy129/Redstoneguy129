@@ -1,0 +1,19 @@
+{
+	"name": "Portfolio Website",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": {
+			"NODE_VERSION": "17.3.0",
+			"PNPM_VERSION": "6.31.0",
+			"ALPINE_VERSION": "3.14"
+		}
+	},
+	"extensions": [
+		"bradlc.vscode-tailwindcss",
+		"ms-vscode.vscode-typescript-next",
+		"dsznajder.es7-react-js-snippets",
+		"orta.vscode-jest"
+	],
+	"postCreateCommand": "pnpm install",
+	"remoteUser": "vscode"
+}
