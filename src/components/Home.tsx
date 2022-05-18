@@ -8,7 +8,7 @@ export default function Home() {
                         <span className="dark:text-white">Cameron</span>{' '}
                         <span className="bg-gradient-to-r from-orange-400 to-rose-400 text-transparent bg-clip-text leading-normal">Whyte</span>
                     </h1>
-                    <p className="mt-3 text-white max-w-md mx-auto text-base sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+                    <p className="mt-3 dark:text-white max-w-md mx-auto text-base sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
                         Hello!, I'm a Developer based in the UK. Always looking to learn and improve the quality of my work!
                     </p>
                     <div className="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
