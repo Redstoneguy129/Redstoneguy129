@@ -1,7 +1,12 @@
 import { h } from "preact";
+import Footer from "./components/Footer";
+import Home from "./components/Home";
 
 export default function App() {
     return (
-        <h1 className="font-thin text-amber-700">CameronWhyte</h1>
+        <div>
+            <Home/>
+            <Footer/>
+        </div>
     );
 }
