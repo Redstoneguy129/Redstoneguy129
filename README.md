@@ -17,7 +17,7 @@ I'm a full stack developer with experience in backend software engineering. I us
 - C#
 
 
-## Other Common Github Profile Sections
+## 
 👩‍💻 I'm currently working on Quirkcraft.
 
 🧠 I'm currently learning computational finance and deep learning in finance.
