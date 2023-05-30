@@ -34,6 +34,16 @@ const Index = () => {
                     "Building a development team",
                     "Producing Open Source Software"
                 ]
+              },
+              {
+                name: "Lev Solutions Ltd",
+                role: "IPP Software Engineer Assistant",
+                date: "2021 - 2022",
+                tasks: [
+                    "Creating Spring Boot Microservices",
+                    "NextJS Website Development",
+                    "Creating a CI/CD Pipeline"
+                ]
               }
             ]}/>
             <Skills sections={[
@@ -41,10 +51,10 @@ const Index = () => {
                 title: "Programming Languages",
                 skills: [
                     "TypeScript",
-                    "Golang",
                     "Python",
                     "Java",
-                    "Rust"
+                    "Rust",
+                    "C++"
                 ]
               },
               {
