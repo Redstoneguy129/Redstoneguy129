@@ -6,7 +6,7 @@ ENV DENO_DEPLOYMENT_ID=${GIT_REVISION}
 WORKDIR /app
 
 COPY . .
-RUN deno cache main.ts
+RUN deno cache main.ts --lock=deno.lock --lock-write
 
 EXPOSE 8000
 
