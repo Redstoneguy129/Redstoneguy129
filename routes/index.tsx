@@ -3,7 +3,6 @@ import Me from "../components/me.tsx";
 import Education from "../components/education.tsx";
 import Experience from "../components/experience.tsx";
 import Skills from "../components/skills.tsx";
-import Projects, {Project} from "../components/projects.tsx";
 import Footer from "../components/footer.tsx";
 
 const Index = () => {
@@ -27,7 +26,7 @@ const Index = () => {
             <Experience jobs={[
               {
                 name: "Quirk Studios",
-                role: "Founder",
+                role: "Co-Founder",
                 date: "2023 - Present",
                 tasks: [
                     "Creating Microservices Infrastructure",
