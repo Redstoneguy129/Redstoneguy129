@@ -71,18 +71,22 @@
     "https://deno.land/x/importmap@0.2.1/mod.ts": "ae3d1cd7eabd18c01a4960d57db471126b020f23b37ef14e1359bbb949227ade",
     "https://deno.land/x/rutt@0.0.13/mod.ts": "af981cfb95131152bf50fc9140fc00cb3efb6563df2eded1d408361d8577df20",
     "https://esm.sh/*preact-render-to-string@5.2.4": "17b6d008274c5e8fc597d42bc2dd95f2cc5a420efe3a7e2ddde2ee4eb50f80e7",
+    "https://esm.sh/preact-render-to-string@5.2.4": "48ee27e91fbb3e9136767e32717c7a5b41e788a8a7a3608a3cbe69704da63a10",
     "https://esm.sh/preact@10.11.0": "7a2563b2c3ec030072836f2d2746ffda575fbddd9bb573ec8f9ebdcdefabf4fa",
     "https://esm.sh/preact@10.11.0/hooks": "2b8ec155eb8b87501663f074acff1d55a9114fa7d88f0b39da06c940af1ff736",
     "https://esm.sh/preact@10.11.0/jsx-runtime": "5c123264f19799ab243211132dded45f6d42d594b5c78dd585f947d07bf20eae",
     "https://esm.sh/stable/preact@10.11.0/deno/hooks.js": "da007f66891314678a699e81043726a60ccc7981a8c65a6c5b2a83099dd4eb8c",
     "https://esm.sh/stable/preact@10.11.0/deno/jsx-runtime.js": "dd51d3a9e2006fc844e355973253755ef3d869729d44746dc69a2a4c14771f78",
     "https://esm.sh/stable/preact@10.11.0/deno/preact.mjs": "ad6f5591bcf99d1a3f92079b2215ee7d0b00aed264afde30b4290159142328dd",
+    "https://esm.sh/stable/preact@10.15.1/denonext/preact.mjs": "30710ac1d5ff3711ae0c04eddbeb706f34f82d97489f61aaf09897bc75d2a628",
     "https://esm.sh/twind@0.16.17": "3bec397a8b7cb1a8bcc77eb2823729de1c460a6f1e2e6d005d27c45680db3483",
     "https://esm.sh/twind@0.16.17/sheets": "b6c658880b92b7de79e95f7436ed60395b04a4910760d71f53feb7f2c0a87239",
     "https://esm.sh/v117/preact@10.11.0/hooks/src/index.d.ts": "5c29febb624fc25d71cb0e125848c9b711e233337a08f7eacfade38fd4c14cc3",
     "https://esm.sh/v117/preact@10.11.0/jsx-runtime/src/index.d.ts": "e153460ed2b3fe2ad8b93696ecd48fbf73cd628b0b0ea6692b71804a3af69dfd",
     "https://esm.sh/v117/preact@10.11.0/src/index.d.ts": "1a5c331227be54be6515b0c92a469d352834fa413963ae84a39a05a3177111f6",
     "https://esm.sh/v117/preact@10.11.0/src/jsx.d.ts": "c423715fd7992b2e1446fea11d2d04e8adbd66c1edca1ce5e85f90e0d26a2eb2",
+    "https://esm.sh/v118/preact@10.15.1/src/index.d.ts": "fa83186a4b6caca36d52ca2d49b481c3ca5460988d4a8388d44dadc28987fb27",
+    "https://esm.sh/v118/preact@10.15.1/src/jsx.d.ts": "a6e4b7e4af3b959f8cfd41a0f475c547807ebcec8524d9605ab5c6de79f302fa",
     "https://esm.sh/v122/csstype@3.1.2/index.d.ts": "4c68749a564a6facdf675416d75789ee5a557afda8960e0803cf6711fa569288",
     "https://esm.sh/v122/preact-render-to-string@5.2.4/X-ZS8q/deno/preact-render-to-string.mjs": "5ddbdb771669d535c808638acaa03e0866128c4e58462aa34de05a8997d6f635",
     "https://esm.sh/v122/preact-render-to-string@5.2.4/X-ZS8q/src/index.d.ts": "b1d73703252c8570fdf2952475805f5808ba3511fefbd93a3e7bd8406de7dcd0",
@@ -90,6 +94,8 @@
     "https://esm.sh/v122/twind@0.16.17/deno/sheets.js": "c504a460f5df2954f7334a821ef3ac9bedfc94dcc3f0dbf60af8d22f000391db",
     "https://esm.sh/v122/twind@0.16.17/deno/twind.mjs": "23f4befc34e2542f0eea953ff3d11b32ce9287fe0df1f834c70205ad9df2c810",
     "https://esm.sh/v122/twind@0.16.17/sheets/sheets.d.ts": "b7ebc57b705b3c1da21abce06c8ecc27d9ef2f463f6b4816acc9a5a121fc0f0f",
-    "https://esm.sh/v122/twind@0.16.17/twind.d.ts": "d985f0adbee5280374c8187141977b713bdefe9e63bb381ae1ab61a9686bc3ff"
+    "https://esm.sh/v122/twind@0.16.17/twind.d.ts": "d985f0adbee5280374c8187141977b713bdefe9e63bb381ae1ab61a9686bc3ff",
+    "https://esm.sh/v126/preact-render-to-string@5.2.4/denonext/preact-render-to-string.mjs": "74b3d0cedea6abd64ac433fe73f9d15d4beee0001f11654906764065502a327e",
+    "https://esm.sh/v126/preact-render-to-string@5.2.4/src/index.d.ts": "2b57d30ce7e48739f3d93c3ec51bfd6241e780f8f648675390bd70dc8dce92b9"
   }
 }
