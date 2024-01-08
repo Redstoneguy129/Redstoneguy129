@@ -62,8 +62,8 @@ const Index = () => {
                         skills: [
                             "React",
                             "Next.js",
-                            "Gatsby",
-                            "Vue",
+                            "Reactor",
+                            "Spring Boot",
                             "Node",
                             "Express",
                             "Nest.js",
@@ -97,6 +97,13 @@ const Index = () => {
                         technologies: "Deno, Fresh, Tailwind CSS, Framer Motion",
                         from: "#0ea200",
                         to: "#0095ff"
+                    },
+                    {
+                        link: "https://github.com/Redstoneguy129/PufferBank",
+                        domain: "PufferBank",
+                        technologies: "Java, Spring Boot, Discord4J, Postgresql",
+                        from: "#f7b100",
+                        to: "#00aab0"
                     }
                 ]}/>
                 <Footer/>
