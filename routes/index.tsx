@@ -104,6 +104,13 @@ const Index = () => {
                         technologies: "Java, Spring Boot, Discord4J, Postgresql",
                         from: "#f7b100",
                         to: "#00aab0"
+                    },
+                    {
+                        link: "https://github.com/Redstoneguy129/Netherite",
+                        domain: "Netherite CLI",
+                        technologies: "Rust",
+                        from: "#31292a",
+                        to: "#d6d4d4"
                     }
                 ]}/>
                 <Footer/>
