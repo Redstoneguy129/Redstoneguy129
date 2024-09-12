@@ -14,11 +14,6 @@ const Index = () => {
                 <Me/>
                 <Education milestones={[
                     {
-                        title: "Royal Holloway, University of London",
-                        date: "2023 - Present",
-                        text: "Computer Science (Software Engineering) MSci"
-                    },
-                    {
                         title: "USP College",
                         date: "2021 - 2023",
                         text: "BTEC Level 3 Extended Diploma in IT"
