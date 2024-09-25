@@ -14,3 +14,4 @@ I'm a full stack developer with experience in backend software engineering.
 - Java / Kotlin
 - Python
 - Rust
+- Elixir
