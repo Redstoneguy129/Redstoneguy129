@@ -14,6 +14,16 @@ const Index = () => {
                 <Me/>
                 <Education milestones={[
                     {
+                        title: "Oxbridge Home Learning",
+                        date: "2024 - 2025",
+                        text: "A-Level Computer Science & Mathematics"
+                    },
+                    {
+                        title: "Royal Holloway, University Of London",
+                        date: "2023 - 2024",
+                        text: "Computer Science (Software Engineering) MSci"
+                    },
+                    {
                         title: "USP College",
                         date: "2021 - 2023",
                         text: "BTEC Level 3 Extended Diploma in IT"
@@ -23,7 +33,7 @@ const Index = () => {
                     {
                         name: "Quirk Studios",
                         role: "Co-Founder",
-                        date: "2023 - Present",
+                        date: "2023 - 2024",
                         tasks: [
                             "Creating Microservices Infrastructure",
                             "Building a development team",
@@ -47,9 +57,9 @@ const Index = () => {
                         skills: [
                             "TypeScript",
                             "Python",
+                            "Elixir",
                             "Java",
-                            "Rust",
-                            "C++"
+                            "Rust"
                         ]
                     },
                     {
